@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getDatabase, ref, update, onValue } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyAt1ifFrPSjjC2PS6EO69vWiLA2o2qZTc0",
@@ -36,9 +35,9 @@ onValue(ref(database, 'dados'), (snapshot) => {
     date_now = date_now[date_now.length-1];
     let msg = date_now.split('/')
     let newDate = `${msg[0]}/${msg[1]}`
-    parag_x.innerText = `O ultimo valor lido foi x: ${x_values[x_values.length-1]}ms²`;
-    parag_y.innerText = `O ultimo valor lido foi y: ${y_values[y_values.length-1]}ms²`;
-    parag_z.innerText = `O ultimo valor lido foi z: ${z_values[z_values.length-1]}ms²`;
+    parag_x.innerText = `x: ${x_values[x_values.length-1]}ms²`;
+    parag_y.innerText = `y: ${y_values[y_values.length-1]}ms²`;
+    parag_z.innerText = `z: ${z_values[z_values.length-1]}ms²`;
     myChart.data.datasets[0].data.push(x_values[x_values.length-1]);
     myChart.data.datasets[1].data.push(y_values[y_values.length-1]);
     myChart.data.datasets[2].data.push(z_values[z_values.length-1]);

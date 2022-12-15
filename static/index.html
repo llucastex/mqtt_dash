@@ -4,18 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>ESP32 MQTT and ADXL345</h1>
-    <p id="t1">O ultimo valor lido foi x:</p>
-    <p id="t2">O ultimo valor lido foi y:</p>
-    <p id="t3">O ultimo valor lido foi z:</p>
-    <button id="button">Fazer Leitura</button>
+    <h1 class="font-bold text-3xl mb-2 text-center py-3">
+        ESP32 MQTT and ADXL345
+      </h1>
+    
+    <div class="flex text-center py-4">
+        <div class="flex-auto inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            <p id="t1">x:</p>
+        </div>
+        <div class="flex-auto inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            <p id="t2">y:</p>
+        </div>
+        <div class="flex-auto inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            <p id="t3">z:</p>
+        </div>
+      </div>
+    <div class="flex text-center py-4">
+        <div class="flex-auto">
+            <button class="py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75" id="button">Fazer Leitura</button>
+        </div>
+    </div>
 
     <canvas class="line-chart" width="100" height="50"></canvas>
 
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     <script type="module" src="/static/javascript.js"></script>
 </body>
 </html>
+
